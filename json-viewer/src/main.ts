@@ -15,7 +15,7 @@ const games: Game[] = loadJSON<Game[]>("gameslijst.json");
 
 // Menu weergeven
 const showMenu = (): void => {
-  console.log("\nWelcome to the JSON data viewer!\n");
+  console.log("Welcome to the JSON data viewer!\n");
   console.log("1. View all data");
   console.log("2. Filter by ID");
   console.log("3. Exit");
@@ -23,7 +23,7 @@ const showMenu = (): void => {
 
 // Alle games tonen
 const showAllGames = (): void => {
-  console.log("\n All Games:");
+  console.log("All Games:");
   games.forEach((game) => {
     console.log(`- ${game.name} (${game.id})`);
   });
@@ -31,30 +31,30 @@ const showAllGames = (): void => {
 
 // Game zoeken op ID
 const filterByID = (): void => {
-  const id = readlineSync.questionInt("\nPlease enter the ID you want to filter by: ");
+  const id = readlineSync.questionInt("Please enter the ID you want to filter by: ");
   const game = games.find((g) => g.id === id);
 
   if (!game) {
-    console.log("\n No game found with that ID.");
+    console.log("No game found with that ID.");
     return;
   }
 
-  console.log(`\n ${game.name} (${game.id})`);
-  console.log(`  - Description: ${game.description}`);
-  console.log(`  - Price: €${game.price.toFixed(2)}`);
-  console.log(`  - Available: ${game.isAvailable ? " Yes" : " No"}`);
-  console.log(`  - Release Date: ${game.releaseDate}`);
-  console.log(`  - Category: ${game.category}`);
-  console.log(`  - Genres: ${game.genres.join(", ")}`);
-  console.log(`  - Developer: ${game.developer.name} (${game.developer.country})`);
-  console.log(`  - Website: ${game.developer.website}`);
+  console.log(`${game.name} (${game.id})`);
+  console.log(`- Description: ${game.description}`);
+  console.log(`- Price: €${game.price.toFixed(2)}`);
+  console.log(`- Available: ${game.isAvailable ? " Yes" : " No"}`);
+  console.log(`- Release Date: ${game.releaseDate}`);
+  console.log(`- Category: ${game.category}`);
+  console.log(`- Genres: ${game.genres.join(", ")}`);
+  console.log(`- Developer: ${game.developer.name} (${game.developer.country})`);
+  console.log(`- Website: ${game.developer.website}`);
 };
 
 // Hoofdloop
 const main = (): void => {
   while (true) {
     showMenu();
-    const choice = readlineSync.questionInt("\nPlease enter your choice: ");
+    const choice = readlineSync.questionInt("Please enter your choice: ");
 
     switch (choice) {
       case 1:
@@ -64,10 +64,10 @@ const main = (): void => {
         filterByID();
         break;
       case 3:
-        console.log("\n Exiting program...");
+        console.log("Exiting program...");
         process.exit(0);
       default:
-        console.log("\n Invalid choice, please try again.");
+        console.log("Invalid choice, please try again.");
     }
   }
 };
