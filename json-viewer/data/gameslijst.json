@@ -6,7 +6,7 @@
     "price": 39.99,
     "isAvailable": true,
     "releaseDate": "2018-04-20",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/God_of_war.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/God_of_war.jpg",
     "category": "Action",
     "genres": ["Actie", "Avontuur", "Singleplayer"],
     "developer": {
@@ -24,7 +24,7 @@
     "price": 69.99,
     "isAvailable": true,
     "releaseDate": "2022-11-09",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/God_of_war_ragnarok.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/God_of_war_ragnarok.jpg",
     "category": "Action",
     "genres": ["Actie", "Avontuur", "Singleplayer"],
     "developer": {
@@ -42,7 +42,7 @@
     "price": 49.99,
     "isAvailable": true,
     "releaseDate": "2013-06-14",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/The_last_of_us.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/halo_infinite.jpg",
     "category": "Adventure",
     "genres": ["Actie", "Avontuur", "Overleving"],
     "developer": {
@@ -60,7 +60,7 @@
     "price": 59.99,
     "isAvailable": true,
     "releaseDate": "2021-12-08",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/halo_infinite.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/halo_infinite.jpg",
     "category": "Shooter",
     "genres": ["First-Person Shooter", "Science Fiction", "Multiplayer"],
     "developer": {
@@ -78,7 +78,7 @@
     "price": 59.99,
     "isAvailable": true,
     "releaseDate": "2019-10-25",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/Call_of_Duty.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/Call_of_Duty.jpg",
     "category": "Shooter",
     "genres": ["First-Person Shooter", "Actie", "Multiplayer"],
     "developer": {
@@ -96,7 +96,7 @@
     "price": 29.99,
     "isAvailable": true,
     "releaseDate": "2013-09-17",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/gtaV.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/gtaV.jpg",
     "category": "Action-Adventure",
     "genres": ["Open Wereld", "Actie", "Avontuur"],
     "developer": {
@@ -114,7 +114,7 @@
     "price": 14.99,
     "isAvailable": true,
     "releaseDate": "2004-10-26",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/GTA_san_andreas.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/GTA_san_andreas.jpg",
     "category": "Action-Adventure",
     "genres": ["Open Wereld", "Actie", "Avontuur"],
     "developer": {
@@ -132,7 +132,7 @@
     "price": 0.00,
     "isAvailable": true,
     "releaseDate": "2012-08-21",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/counter_strike.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/counter_strike.jpg",
     "category": "Shooter",
     "genres": ["First-Person Shooter", "Tactisch", "Multiplayer"],
     "developer": {
@@ -150,7 +150,7 @@
     "price": 49.99,
     "isAvailable": true,
     "releaseDate": "2018-10-05",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/assasins_odyssey.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/assasins_odyssey.jpg",
     "category": "Action-Adventure",
     "genres": ["Open Wereld", "RPG", "Historisch"],
     "developer": {
@@ -168,7 +168,7 @@
     "price": 69.99,
     "isAvailable": true,
     "releaseDate": "2021-11-09",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/games_foto/main/games_foto/Forza_horizon_5.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/Forza_horizon_5.jpg",
     "category": "Racing",
     "genres": ["Race", "Open Wereld", "Multiplayer"],
     "developer": {
@@ -180,3 +180,6 @@
     }
   }
 ]
+  
+    
+
