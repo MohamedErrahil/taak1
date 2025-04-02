@@ -60,7 +60,7 @@
     "price": 59.99,
     "isAvailable": true,
     "releaseDate": "2021-12-08",
-    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/halo_infinite.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/MohamedErrahil/taak1/main/games_foto/The_last_of_us.jpg",
     "category": "Shooter",
     "genres": ["First-Person Shooter", "Science Fiction", "Multiplayer"],
     "developer": {

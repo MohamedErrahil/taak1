@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // "Details"-link met afbeelding
                 const detailCell = row.insertCell(3);
                 const detailLink = document.createElement('a');
-                detailLink.href = `/games_foto/${game.imageUrl}`;
+                detailLink.href = `/details/${game.id}`;
                 detailLink.textContent = 'Details';
                 detailLink.target = "_blank"; // Opent in een nieuw tabblad
                 detailCell.appendChild(detailLink);
