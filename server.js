@@ -1,37 +1,64 @@
 const express = require('express');
+const path = require('path');
+const fs = require('fs');
 const app = express();
-const port = 3000;
 
-// Statische bestanden serveren
-app.use(express.static('public'));
-app.use('/games_foto', express.static(__dirname + '/games_foto'));
+// Configuratie
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'public'));
 
+// Static files
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/games_foto', express.static(path.join(__dirname, 'games_foto')));
 
-// Data importeren
-const games = require('./json-viewer/data/gameslijst.json');
+// Routes
+app.get('/test', (req, res) => {
+  res.send('Server basiswerking OK!');
+});
 
-// Route voor overzichtspagina
+app.get('/', (req, res) => {
+  res.redirect('/games');
+});
+
 app.get('/games', (req, res) => {
-    res.json(games);
+  try {
+    const gamesData = fs.readFileSync(
+      path.join(__dirname, 'json-viewer', 'data', 'gameslijst.json'),
+      'utf-8'
+    );
+    const games = JSON.parse(gamesData);
+    res.render('index', { 
+      title: 'Game Overzicht',
+      games: games 
+    });
+  } catch (err) {
+    console.error('Fout bij laden games:', err);
+    res.status(500).send('Fout: Kon games niet laden');
+  }
 });
 
 app.get('/details/:id', (req, res) => {
-    const gameId = req.params.id;
-    const game = games.find(g => g.id === parseInt(gameId));
+  try {
+    const gamesData = fs.readFileSync(
+      path.join(__dirname, 'json-viewer', 'data', 'gameslijst.json'),
+      'utf-8'
+    );
+    const games = JSON.parse(gamesData);
+    const game = games.find(g => g.id === parseInt(req.params.id));
+    
     if (game) {
-        res.send(`
-            <h1>${game.name}</h1>
-            <p>Genre: ${game.category}</p>
-            <p>Release Datum: ${game.releaseDate}</p>
-            <p>Beschrijving: ${game.description}</p>
-            <img src="${game.imageUrl}" alt="${game.name}" style="max-width: 100%;">
-            <!-- Voeg meer details toe -->
-        `);
+      res.render('details', { game });
     } else {
-        res.status(404).send('Game not found');
+      res.status(404).send('Game niet gevonden');
     }
+  } catch (err) {
+    console.error('Fout bij details:', err);
+    res.status(500).send('Serverfout');
+  }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Start server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server gestart op http://localhost:${PORT}`);
 });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/games">Overzicht</a>
+        <div class="search-container">
+            <input type="text" id="filter" placeholder="Filter op naam...">
+        </div>
+    </nav>
+    
+    <h1>Game Overzicht</h1>
+    <table id="gamesTable">
+        <thead>
+            <tr>
+                <th>Afbeelding</th>
+                <th>Naam</th>
+                <th>Genre</th>
+                <th>Release Datum</th>
+                <th>Acties</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% games.forEach(function(game) { %>
+                <tr>
+                    <td><img src="<%= game.imageUrl %>" alt="<%= game.name %>" style="max-width: 100px;"></td> 
+                    <td><%= game.name %></td>
+                    <td><%= game.category %></td>
+                    <td><%= game.releaseDate %></td>
+                    <td><a href="/details/<%= game.id %>">Details</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

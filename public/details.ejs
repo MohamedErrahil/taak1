@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= game.name %> - Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/games">Overzicht</a>
+        <div class="search-container">
+            <input type="text" id="filter" placeholder="Filter op naam...">
+        </div>
+    </nav>
+    <div class="detail-container">
+        <h1><%= game.name %></h1>
+        <img src="<%= game.imageUrl %>" alt="<%= game.name %>" class="game-image">
+        <div class="detail-info">
+            <p><strong>Genre:</strong> <%= game.category %></p>
+            <p><strong>Release Datum:</strong> <%= game.releaseDate %></p>
+            <p><strong>Prijs:</strong> €<%= game.price.toFixed(2) %></p>
+            <p><strong>Beschrijving:</strong> <%= game.description %></p>
+        </div>
+        <a href="/games" class="back-button">Terug naar Overzicht</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
